@@ -1,15 +1,17 @@
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+
+  const curentlocation=location.href;
+  const menuItem=document.querySelectorAll('a');
+  const menuLength=menuItem.length;
+  for(let i=0;i<menuLength;i++){
+    if(menuItem[i].href===curentlocation){
+      menuItem[i].className="active"
+    }
+  }
+
+function display()
+{
+  document.querySelector(".floating-parent").style.display="none";
+}
+function displaysss(){
+  document.querySelector(".floating-parent").style.display="block";
+}
